@@ -1,0 +1,345 @@
+/* Basic */
+.loginn{
+	float:right;
+}
+	body {
+		background:#FFF ;/* color of page and footer*/
+        
+	}
+
+	body, span {
+        
+		color:  #232323;/*color of information, body */
+		font-family: 'Times New Roman';
+		font-weight: 400;
+        font-size: 14pt;
+		line-height: 0.50em;
+	}
+
+	a {
+		color: #F59BB8;/*COLOR OF LINKS IN THE RIGHT AND LEFT*/
+		text-decoration:none; /*binagoskdnsjdbjhdbwihdbsnjdnanjabncbs*/
+	}
+
+a:hover,
+a:active
+{
+   color:#c46f7d;
+    text-decoration: none;
+}
+
+	strong, b {
+		font-weight: 700;
+	}
+
+	p, ul, ol{
+		margin: 0 0 2em 0;
+         font-size: 14pt;
+	}
+
+	p {
+		line-height: 2em;
+        font-size: 14pt;
+	}
+
+	h1, h2, h3, h4, h5, h6 {
+		margin: 0;
+		padding: 0;
+		color: black;
+		font-family: 'Times New Roman';
+		font-weight: 700;
+	}
+
+    h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
+			color: inherit;
+			text-decoration: none;
+		}
+
+	h2 {
+		font-size: 1.5em;
+	}
+
+	h3 {
+		font-size: 1.25em;
+	}
+
+	
+	hr {
+		border-top: solid 1px #888888;
+		border: 1.5;
+	}
+
+	
+
+	header.major {
+		padding-bottom: 3em;
+		text-transform: uppercase;
+	}
+
+		header.major h2 {
+			margin: 0;
+			padding: 0;
+			line-height: 1em;
+			font-weight: 800;
+			font-size: 2.8em;
+		}
+
+		header.major .byline {
+			display: block;
+			margin: 0.50em 0 0 0;
+			padding: 0 0 0.5em 0;
+			letter-spacing: 1px;
+			font-size: 1.3em;
+			font-weight: 300;
+		}
+
+	footer > :last-child {
+		margin-bottom: 0;
+	}
+
+	footer.major {
+		padding-top: 3em;
+      
+	}
+
+/*Title*/
+.tile:hover, .title:active{
+    color:#c46f7d;
+    text-decoration: none;
+    
+}
+
+
+/* Image */
+
+	.image {
+		border: 0;
+		position: relative;
+	}
+
+		.image.fit {
+			display: block;
+		}
+
+			.image.fit img {
+				display: block;
+				width: 100%;
+			}
+
+		.image.feature {
+			display: block;
+			margin: 0 0 2em 0;
+		}
+
+			.image.feature img {
+				display: block;
+				width: 100%;
+			}
+
+		.image.featured {
+			position: static;
+			display: block;
+			margin: 0;
+		}
+
+			.image.featured img {
+				display: block;
+				width: 100%;
+			}
+
+.pink
+{
+    color:#58585A;
+}
+.gy
+{
+    color:slategray;
+}
+
+
+/* Button */
+
+	.button {
+		appearance: none;
+		transition:  0.15s ease-in-out;
+		cursor: pointer;
+		display: inline-block;
+		padding: 0.50em 1.25em;
+		text-align: center;
+		text-decoration: none;
+		text-transform: uppercase;
+		display: inline-block;
+		font-size: 1em;
+		font-weight: 600;
+        color:#58585A;
+            
+           border:solid;
+            border-color: #58585A;
+            border-width: 3px 3px 3px 3px;
+        border-radius: 6px;
+       
+		
+	}
+
+
+		.button:hover,.button:active {
+            background:  #F59BB8;/*COLOR OF BUTOONS*/
+		border-radius: 6px;
+	border-color: #F59BB8;
+		color: white;
+          text-decoration: none;
+            
+		}
+
+		
+
+/* Wrapper */
+
+	.wrapper.style1 {
+		padding-top: 10em;
+		padding-bottom: 10em;
+		background: url("../images/bg3.jpg") no-repeat center top;
+		background-size: cover;
+		background-attachment: fixed;
+		backface-visibility: hidden;
+		transform: translateZ(0);
+	}
+    .wrapper.style3 {
+		padding-top: 5.2em;
+		padding-bottom: 10em;
+		background: url("../images/bg3.jpg") no-repeat center top;
+		background-size: cover;
+		background-attachment: fixed;
+		backface-visibility: hidden;
+		transform: translateZ(0);
+	}
+
+	.wrapper.style2 {
+		padding: 6em 0;
+		background:#F59BB8;
+		color: white;
+	}
+
+/* Header */
+
+	#header {
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100%;
+        font-family: 'Comic Sans Ms';
+	background:linear-gradient(#fbb3ca,#F59BB8);
+		color: #fff;
+		padding: 0em 0em 0em 0em;
+	    text-align: center;
+	}
+/* Logo skincare101 in the top of the page*/
+
+	#logo {
+      
+        margin-top: 1em;
+		font-size: 2.3em;
+		cursor: default;
+        
+	}
+
+	#logo h1 {
+        font-family:'Algerian';
+	}
+
+#logo2 { /* title of the tips chuchu*/
+		font-size: 2em;
+		cursor: default;
+	}
+
+	#logo2 h1 {/* title of the tips chuchu*/
+		display: inline-block;
+        text-transform: uppercase;
+}
+/* Banner The Skin care will help you ........ */
+	#banner {
+		text-align: center;
+		color: #3C3733;
+		padding: 0em 4em;
+		margin-bottom: 6em;
+	}
+
+		#banner p {
+			font-size: 2.25em;
+			line-height: 0.75em;
+		}
+	#banner strong,
+	#banner a {
+		color: inherit;
+	}
+
+/* Page/white box of information */
+
+	#page {
+		
+		background: #FFF;
+		padding: 6em 4em 6em 4em;
+		border-radius: 6px;
+	}
+
+/* Box/ box in the categories and tips */
+
+	.box {
+		padding: 3em 2em;
+		background-color:white;
+		text-align: center;
+        border-top:solid;
+        border-top-style:groove;
+		border-radius: 0px 0px 6px 6px;
+	}
+/* Copyright */
+
+#copyright {
+		color: #555555;
+		text-align: center;
+		display: block;
+        background:linear-gradient(#fbb3ca,#F59BB8);
+		padding: 2em 0em;
+		font-size: 14pt;
+	}
+
+		#copyright a {
+			text-decoration: none;
+			color: #fff;
+		}
+
+#copyright a:hover, #copyright a:hover {
+    text-decoration: underline;
+    color: #fff;
+}
+
+
+/*header*/
+#mainav{}
+#mainav ul{text-transform:uppercase;}
+#mainav ul ul{position:absolute; width:110px; text-transform:none;}
+#mainav ul ul ul{left:180px; top:0;}
+#mainav li{display:inline-block; position:relative; margin:0 15px 0 0; padding:0;}/*margin between text of headers*/
+#mainav li:last-child{margin-right:0;}
+#mainav li li{width:100%; margin:0;}/*dropdown*/
+#mainav li a{display:block; padding:0;}
+#mainav li li a{border:solid; border-width:0 0 0 0;}
+#mainav .drop{padding-left:15px;}
+#mainav li li a, #mainav li li .drop{display:block; margin:0; padding:10px 15px;}
+#mainav .drop::after, #mainav li li .drop::after{content:"\f0d7";}
+#mainav .drop::after{top:35px; left:5px;}
+#mainav li li .drop::after{top:15px; left:5px;}
+#mainav ul ul{visibility:hidden; opacity:0;}
+#mainav ul li:hover > ul{visibility:visible; opacity:1;}
+/* Navigation */
+#mainav li a{color:inherit; }
+#mainav .active a, #mainav a:hover, #mainav li:hover > a{color: #58585A; background-color:inherit;}
+#mainav li li a, #mainav .active li a{color:#FFF; background-color:rgba(0,0,0,.6);border: solid;border-color:rgba(0,0,0,.6);}
+#mainav li li:hover > a, #mainav .active .active > a{color:#F59BB8; background-color:rgba(0,0,0,.6);border-color: #c46f7d;}
+#mainav li {
+    font-size: 12pt;
+}
+.fl_right, .imgr{float:inherit;}
+.fl_right{
+    float: right;
+}

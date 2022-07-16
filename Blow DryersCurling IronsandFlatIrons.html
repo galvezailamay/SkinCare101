@@ -1,0 +1,176 @@
+
+<html>
+	<head>
+		<title>SKIN CARE 101-Blow Dryers, Curling Irons,and Flat Irons</title><! TITLE OF TAB>
+		
+			<link rel="stylesheet" href="css/skel.css" />
+			<link rel="stylesheet" href="css/style.css" />
+			<link rel="stylesheet" href="css/style-wide.css" />
+	</head>
+	<body>
+
+				<div id="logo">
+							<center><h1 class="pink"><a href="index.html">SKINCARE 101</a></h1></center><br>
+						
+						</div>
+		<!-- Wrapper -->
+			<div class="wrapper style1">
+
+				<!-- Header -->
+					<div id="header">
+                        <div>
+						<nav id="mainav"><br/>
+      <ul>
+             <li>|</li>
+        <li ><a href="index.html">Home</a></li>
+       
+             <li>|</li>
+        <li class="active"><a href="categories.html">Categories</a>
+          <ul>
+            <li><a href="hair.html">Hair</a></li>
+            <li><a href="face.html">Face</a></li>
+            <li><a href="body.html">Body</a></li>
+          </ul>
+        </li>
+             <li>|</li>
+        <li><a href="no-sidebar.html">About Us</a></li>
+             <li>|</li>
+        <li><a href="contact.html">Contact Us</a></li>
+             <li>|</li>
+      </ul>
+    </nav>
+                        </div>
+					</div>
+
+
+				<!-- Page -->
+					<div id="page" class="container">
+						<div class="row">
+						
+							<!-- Content -->
+							<div id="content" class="8u skel-cell-important">
+								<section>
+									<header class="major">
+										<h2>Blow Dryers, Curling Irons,and Flat Irons</h2>
+										<span class="byline"> hair care tips </span>
+									</header>
+									<p>Heat, in general, is bad for your hair as it opens up your cuticles and dries up any moisture. When concentrated heat is applied to your hair, it becomes dry, damaged, and brittle. Using a curling iron or a flat iron often will leave your hair lifeless and thirsty for moisture. If you do not use your hair dryer the right way, it can also cause damage to your hair shaft </p><br/><br/><br/>
+                        
+                        <h5 class ="gold-text">Reference</h5>
+        
+            <ul><a href="https://www.stylecraze.com/articles/hair-care-for-damaged-hair" class="text-link">https://www.stylecraze.com/articles/hair-care-for-damaged-hair</a></ul>
+                                    
+								</section>
+                                  <div class="form-group">
+     <input type="text" name="comment_name" id="comment_name" class="form-control" placeholder="Enter Name" />
+    </div>
+    <div class="form-group">
+     <textarea name="comment_content" id="comment_content" class="form-control" placeholder="Enter Comment" rows="5"></textarea>
+    </div>
+    <div class="form-group">
+     <input type="hidden" name="comment_id" id="comment_id" value="0" />
+     <input type="submit" name="submit" id="submit" class="btn btn-info" value="Submit" />
+    </div>
+   </form>
+   <span id="comment_message"></span>
+   <br />
+   <div id="display_comment"></div>
+							</div>
+		
+							<!-- Sidebar -->
+							<div id="sidebar" class="4u">
+								<section>
+									<header class="major">
+										<h2>hair care tips</h2>
+									</header>
+									<div>
+										<section class="11u">
+											<ul >
+											<li><a href="perms.html">Perms</a></li><br/>
+												<li><a href="bleaching.html">Bleaching</a></li><br/>
+												<li><a href="overbrushing.html">Over Brushing</a></li><br/>
+												
+												<li><a href="How%20To%20Identify%20Damaged%20Hair.html">How To Identify Damaged Hair</a></li><br/>
+                                                <li><a href="Trim%20Damaged%20Hair%20Ends.html">Trim Damaged Hair Ends</a></li>
+											</ul>
+										</section>
+										
+									</div>
+								</section>
+								<section>
+									<header class="major">
+										<h2>categories</h2>
+									</header>
+									<ul class="default">
+										<li><a href="hair.html">HAIR CARE TIPS</a></li><br/>
+										<li><a href="face.html">FACE CARE TIPS</a></li><br/>
+										<li><a href="body.html">BODY CARE TIPS</a></li>
+									</ul>
+								</section>
+							</div>
+							
+						</div>
+					</div>
+				<!-- /Page -->
+
+				
+
+	</div>
+
+	
+	<!-- Copyright -->
+<div id="copyright">
+    <a href="index.html">SkinCare101</a>
+			<div class="container">
+             <a href="Blow%20DryersCurling%20IronsandFlatIrons.html">Back to top</a>
+			</div>
+		</div>
+
+	</body>
+</html>
+<script>
+$(document).ready(function(){
+ 
+ $('#comment_form').on('submit', function(event){
+  event.preventDefault();
+  var form_data = $(this).serialize();
+  $.ajax({
+   url:"add_comment.php",
+   method:"POST",
+   data:form_data,
+   dataType:"JSON",
+   success:function(data)
+   {
+    if(data.error != '')
+    {
+     $('#comment_form')[0].reset();
+     $('#comment_message').html(data.error);
+     $('#comment_id').val('0');
+     load_comment();
+    }
+   }
+  })
+ });
+
+ load_comment();
+
+ function load_comment()
+ {
+  $.ajax({
+   url:"fetch_comment.php",
+   method:"POST",
+   success:function(data)
+   {
+    $('#display_comment').html(data);
+   }
+  })
+ }
+
+ $(document).on('click', '.reply', function(){
+  var comment_id = $(this).attr("id");
+  $('#comment_id').val(comment_id);
+  $('#comment_name').focus();
+ });
+ 
+});
+</script>
